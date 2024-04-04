@@ -1,4 +1,5 @@
 import 'package:trading/common_libs.dart';
+import 'package:trading/presentation/home/widgets/tile_widget.dart';
 
 class HomeOverView extends StatelessWidget {
   const HomeOverView({super.key});
@@ -13,7 +14,7 @@ class HomeOverView extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 children: state.date
                     .asList()
-                    .map((data) => TileWidget(tradingSignal: data))
+                    .map((data) => HomeTileWidget(tradingSignal: data))
                     .toList(),
               ),
               error: (_) => const Center(child: Text("Something went Wrong")),
